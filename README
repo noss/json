@@ -1,0 +1,4 @@
+This JSON comes with an app file so it is easy to use from other applications that need JSON encoding/decoding capability and not the rest.
+
+The module have been renamed to json, but the interface is otherwise the same as mochijson2.
+
