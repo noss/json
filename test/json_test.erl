@@ -3,7 +3,7 @@
 -include_lib("eunit/include/eunit.hrl").
 
 encode_decode(Data) ->
-    mochijson2:decode(mochijson2:encode(Data)).
+    json:decode(json:encode(Data)).
 
 string_test() ->
     Data = <<"this is a simple string">>,

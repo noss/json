@@ -5,7 +5,7 @@ VERSION=0.2
 
 all: 
 	@mkdir -p ebin
-	cp mochijson2.app.in ebin/mochijson2.app
+	cp json.app.in ebin/json.app
 	(cd src && erl -make)
 
 test:

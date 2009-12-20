@@ -5,7 +5,7 @@
 %%      with binaries as strings, arrays as lists (without an {array, _})
 %%      wrapper and it only knows how to decode UTF-8 (and ASCII).
 
--module(mochijson2).
+-module(json).
 -author('bob@mochimedia.com').
 -export([encoder/1, encode/1]).
 -export([decoder/1, decode/1]).
@@ -93,9 +93,9 @@ json_encode(I, _State) when is_integer(I) andalso I >= -2147483648 andalso I =< 
     %% Anything outside of 32-bit integers should be encoded as a float
     integer_to_list(I);
 json_encode(I, _State) when is_integer(I) ->
-    mochinum:digits(float(I));
+    json_num:digits(float(I));
 json_encode(F, _State) when is_float(F) ->
-    mochinum:digits(F);
+    json_num:digits(F);
 json_encode(S, State) when is_binary(S); is_atom(S) ->
     json_encode_string(S, State);
 json_encode(Array, State) when is_list(Array) ->
