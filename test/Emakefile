@@ -1,0 +1,6 @@
+{'*', [{d, 'TEST'}, debug_info]}.
+
+{['../src/*'],
+ [{d, 'TEST'}, {outdir,"."}, debug_info]}.
+
+
